@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20130730190520) do
   enable_extension "plpgsql"
 
   create_table "books", force: true do |t|
-    t.string   "name"
+    t.string   "title"
     t.string   "description"
     t.string   "author"
     t.integer  "rating"
@@ -37,9 +37,7 @@ ActiveRecord::Schema.define(version: 20130730190520) do
   end
 
   create_table "people", force: true do |t|
-    t.string   "name"
     t.string   "description"
-    t.string   "author"
     t.integer  "rating"
     t.integer  "cat_id"
     t.integer  "user_id"
@@ -72,7 +70,7 @@ ActiveRecord::Schema.define(version: 20130730190520) do
   end
 
   create_table "websites", force: true do |t|
-    t.string   "name"
+    t.string   "title"
     t.string   "description"
     t.string   "author"
     t.integer  "rating"

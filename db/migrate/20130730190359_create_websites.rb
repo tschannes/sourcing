@@ -1,7 +1,7 @@
 class CreateWebsites < ActiveRecord::Migration
 	def change
 		create_table :websites do |t|
-			t.string   "name"
+			t.string   "title"
 			t.string   "description"
 			t.string   "author"
 			t.integer  "rating"

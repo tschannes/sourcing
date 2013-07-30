@@ -7,10 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 tag = Tag.create!(
 	name: "super",
-	tag_size: 2
+	tag_size: 2,
+	taggable_id: 1,
+	taggable_type: "Book"
 	)
 category = Category.create!(
-	title: "tools",
+	name: "tools",
 	cat_size: 3,
 	)
 user = User.create!(
@@ -30,9 +32,7 @@ website = Website.create!(
 	url: "www.example.com"
 	)
 person = Person.create!(
-	#title: "Toni",
 	description: "This is a sample description",
-	author: :name,
 	rating: 3,
 	cat_id: category.id,
 	user_id: user.id,

@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 gem 'pg'
 
 # Use factory_girl for testing
-gem "factory_girl_rails", "~> 4.0"
+gem "factory_girl_rails", "~> 4.0", require: false
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

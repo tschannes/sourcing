@@ -1,14 +1,35 @@
 require 'test_helper'
 
 class CategoryTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-  test "that categories are unique" do 
 
-  end
+	def setup
+		@cat = FactoryGirl.build(:category, name: "category1")
+		@cat2 = FactoryGirl.build(:category, name: "category1")
+		@cat3 = FactoryGirl.build(:category, name: "category3")
+	end
 
-  test "that new instances of cat increase cat_size" do
-  end
-  
+	def teardown
+		@cat = nil
+		@cat2 = nil
+		@cat3 = nil
+	end
+
+	test "cat names are present" do
+		cat = FactoryGirl.build(:category, name: "")
+		assert !cat.save, "it saved an empty string to db"
+	end
+
+	test "that only unique categories can be saved" do
+		cats = []
+		@cat.save
+		cats << @cat
+		assert_equal cats.size, 1
+		@cat2.save
+		cats << @cat2
+		assert_equal cats.size, 1
+		@cat3.save
+		cats << @cat3
+		assert_equal cats.size, 2
+	end
+
 end

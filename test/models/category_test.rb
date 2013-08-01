@@ -20,6 +20,11 @@ class CategoryTest < ActiveSupport::TestCase
 	end
 
 	test "that only unique categories can be saved" do
+		@cat.save
+		assert !@cat2.save
+	end
+
+	test "category count increases properly" do
 		cats = []
 		@cat.save
 		cats << @cat

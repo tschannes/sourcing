@@ -15,6 +15,14 @@ category = Category.create!(
 	name: "tools",
 	cat_size: 3,
 	)
+category2 = Category.create!(
+	name: "suits",
+	cat_size: 1,
+	)
+category3 = Category.create!(
+	name: "cars",
+	cat_size: 2,
+	)
 user = User.create!(
 	first_name: "Toni",
 	last_name: "Tone",
@@ -27,15 +35,15 @@ website = Website.create!(
 	description: "this is an example site",
 	author: "exemplar exemplus",
 	rating: 4,
-	cat_id: category.id,
-	user_id: user.id,
+	cat_id: 1,
+	user_id: 1,
 	url: "www.example.com"
 	)
 person = Person.create!(
 	description: "This is a sample description",
 	rating: 3,
-	cat_id: category.id,
-	user_id: user.id,
+	cat_id: 1,
+	user_id: 1,
 	first_name: "Toni",
 	last_name: "Tonelli",
 	nick_name: "tones",
@@ -47,8 +55,8 @@ book = Book.create!(
 	description: "Most ridiculously baroque novel during WW2",
 	author: "Wolf von Niebelschütz",
 	rating: 9,
-	cat_id: category.id,
-	user_id: user.id,
+	cat_id: 1,
+	user_id: 1,
 	date_published: 1943,
 	publisher: "Unknown"
 	)

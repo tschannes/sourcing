@@ -6,6 +6,12 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+#better errors
+gem 'better_errors'
+
+#pry
+gem 'pry'
+
 # Use factory_girl for testing
 gem "factory_girl_rails", "~> 4.0", require: false
 

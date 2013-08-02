@@ -1,0 +1,7 @@
+<%= form_for @tag, url: {action: "create"} do |tag_form| %>
+  <%= tag_form.text_field :name %>
+  <% binding.pry %>
+  <%= fields_for @tag.taggable do |taggables_form| %>
+    <%= taggables_form.text_field :phone_number %>
+  <% end %>
+<% end %>

@@ -1,16 +1,17 @@
 class CategoriesController < ApplicationController
 
+	before_validation :increase_cat_size
 
-	before_save :increase_cat_size
+
 
 	private
 
 	def increase_cat_size
 
-		if self != nil
-			self.cat_size.increment!
+		if @category != nil
+			@category.cat_size.increment!
 		else
-			self.cat_size = 1
+			@category.cat_size = 1
 		end
 	end
 end

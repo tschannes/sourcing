@@ -1,0 +1,21 @@
+<div class="one-quarter float--left">
+	<h1><%= @cats.categorizable.title %></h1>
+	<p class="lead"><%= @cats.categorizable.description %></p>
+</div>
+<div class="one-quarter float--left">
+	<h1><%= @tags.taggable.title %>
+	</h1>
+	<p class="lead"><%= @tags.taggable.description %></p>
+
+</div>
+<div class="two-quarter float--left">
+	<h1><%= @sources.title %>
+	</h1>
+	<p class="lead"><%= @sources.description %></p>
+	<p > <%= @tags.taggable.author %></p>
+	<p>Created at: <%= time = @tags.taggable.created_at.to_s(:long) %>
+	</p>
+	<p>Number of Tags: <%= @tags.tag_size %>, Number of Categories: <%= @cats.cat_size %></p>
+</div>
+
+

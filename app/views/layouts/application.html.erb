@@ -2,13 +2,21 @@
 <html>
 <head>
   <title>Sources</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<ul class="nav nav--banner nav--fit foo">
+		<li><a href="#">home</a></li>
+		<li><a href="#">about</a></li>
+		<li><a href="#">new source</a></li>
+		<li><a href="#">login</a></li>
+	</ul>
 
+	<h1 class="brand">Welcome to sources</h1>
+		<%= yield %>
+		
 </body>
 </html>
